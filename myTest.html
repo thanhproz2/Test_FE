@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Navbar</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+    <!--  -->
+    <style type="text/css">
+    	.navbar-brand {
+		  padding: 0px;
+		}
+		.navbar-brand>img {
+		  height: 250%;
+		  padding: 15px;
+		  width: auto;
+		  margin-top: -37px;
+		}
+		@media only screen and (max-width : 768px){
+		  .Ex .navbar-brand {
+			  padding: 0px;
+			  transform: translateX(-50%);
+			  left: 50%;
+			  position: absolute;
+			}
+		.Ex .navbar-brand img{
+			/*height: 100%;*/
+			/*width: auto;*/
+			padding: 5px; 
+		}
+
+    </style>
+</head>
+<body>
+<!-- 	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png"></a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Home</a></li>
+	        <li><a href="#">Page 1</a></li>
+	        <li><a href="#">Page 2</a></li> 
+	        <li><a href="#">Page 3</a></li> 
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav> -->
+	<h1>Example 2</h1>
+	<div class="Ex">
+		<nav class="navbar navbar-default" style="background-color: #39FFBE">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><img src="img/mylogo.png"></a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Link</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<li id="1"><a href="#">Action</a></li>
+		<li id="2"><a href="#">Another action</a></li>
+		<li id="3"><a href="#">Something else here</a></li>
+		<li id="4" role="separator" class="divider"></li>
+		<li id="5"><a href="#">Separated link</a></li>
+		<h2>Hello Worrld</h2>
+
+	</div>
+	<script src="../MyProject/js/jquery.min.js"></script>
+  	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  	<script src="../MyProject/js/bootstrap.min.js"></script>
+  	<script>
+  		$(function () {
+  			// var ids ='';
+  			 //var $listItems = $('li');
+
+  			//   $listItems.on('mouseover click', function(){
+  			// 	ids = this.id;
+  			// 	$listItems.children('span').remove();
+  			// 	$(this).append('<span class="priority">' + ids + '</span>')
+  			// });
+
+  			// $listItems.on('mouseout', function(){
+  			// 	$(this).children('span').remove();  				
+  			// });
+
+  			// $('h2').hide().slideDown();
+  			// $('li').hide();
+  			// $('li').each(function(index){
+  			// 	$(this).delay(500*individual).fadeIn(500);
+  			// });
+  			// $('li').on('click', function(e){
+  			// 	//alert("dasdsa");
+  				
+  			// 	$('li span').children('span').remove();
+  			// 	var date = new Date();
+  			// 	alert(date);
+  			// 	var clicked = date.toDateString();
+  			// 	$(this).append('<span class="">' + clicked +  e.type +'</span>');
+  			// });
+  			// animate
+
+  			$('li').click(function(){
+  				$(this).animate({opacity: 0.1, paddingLeft: '+=80'}, 500, function(){
+  					$(this).remove();
+  				});
+  			});
+
+  		});
+  	</script>
+</body>
+</html>

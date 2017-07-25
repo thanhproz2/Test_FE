@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Caculator Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<style type="text/css">
+		.navbar-brand{
+			padding: 0px;
+		}
+		.navbar-brand img{
+			height: 50px;
+			width: auto;
+		}
+		@media only screen and(max-width: 768px){
+		.navbar-brand{
+		  padding: 0px;
+
+		  transform: translateX(-50%);
+		  left:  50%;
+		  position: absolute;
+		}
+		.navbar-brand img{
+		  height: 200%;
+		  padding: 25px;
+		}
+	  }
+	  .row .col-xs-3{
+		margin: 15px 0px 15px 0px;
+	  }
+	</style>
+
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logofix.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" >HOME</a></li>
+					<li><a href="#" >ABOUT</a></li>
+					<li><a href="#" >CONTACT</a></li>
+					<li><a href="#" >HELP</a></li>            
+				</ul>
+			</div>	
+
+		</div>		
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">Caculator</div>
+					<div class="panel-body">
+						<div id="result" style="height: 70px; width: auto;  border-style: solid; text-align: right; font-size: 30px"></div>
+						<div class="row">
+						  <div class="col-xs-3">
+							<button class="btn btn-danger btn-block" type="button" id="btnArrow">&#8592;</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-danger btn-block" type="button" id="btnC">C</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-info btn-block" type="button">+/-</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-success btn-block" type="button">+</button>
+						  </div>
+						</div>
+						<div class="row">
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">7</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">8</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button"">9</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-success btn-block" type="button">-</button>
+						  </div>
+						</div>
+						<div class="row">
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">4</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">5</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">6</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-success btn-block" type="button">x</button>
+						  </div>
+						</div>
+						<div class="row">
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">1</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">2</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button">3</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-success btn-block" type="button">/</button>
+						  </div>
+						</div>
+						<div class="row">
+						  <div class="col-xs-6" style="margin: 15px 0px 15px 0px">
+							<button class="btn btn-default btn-block" type="button" id="btn0">0</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-default btn-block" type="button" id="btn.">.</button>
+						  </div>
+						  <div class="col-xs-3">
+							<button class="btn btn-primary btn-block" type="button">=</button>
+						  </div>
+						</div>
+					</div>		
+					
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	$(function(){
+		
+		var value = 0;
+		var operator = "";
+		var operator_pressed = false;
+
+		$('.btn-default').click(function(){
+			if (operator_pressed) {
+				$("#result").text("");
+				operator_pressed =false;
+			}
+			$('#result').text($('#result').text() + $(this).text());
+		});
+
+		$('.btn-success').click(function(){
+			operator = $(this).text();
+			value = parseFloat($('#result').text());
+			operator_pressed = true;
+		});
+
+		$('.btn-primary').click(function(){
+			switch(operator){
+				case "+":
+					$('#result').text( value + parseFloat($('#result').text()));
+					break;
+				case "-":
+					$('#result').text( value - parseFloat($('#result').text()));
+					break;
+				case "x":
+					$('#result').text( value * parseFloat($('#result').text()));
+					break;
+				case "/":
+					$('#result').text( value / parseFloat($('#result').text()));
+					break;
+				default:
+					break;
+			}
+			operator_pressed = false;
+		});
+
+		$('#btnArrow').click(function(){
+			var temp = $('#result').text();
+			var tmp ="";
+			var len = temp.length -1;
+			for(var i=0; i < len; i++){
+				var tmp = tmp + temp[i];
+			}
+			$('#result').text(tmp);
+
+		});
+
+		$('.btn-info').click(function(){
+			var x = parseFloat($("#result").text());
+			$("#result").text(0 - x);
+		});
+
+		$('#btnC').click(function(){
+		  $('#result').text("");		  
+					
+		});
+	});
+</script>
+</body>
+</html>

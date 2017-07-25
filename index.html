@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Exercise</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+     
+    <style type="text/css">
+      .navbar-brand {
+        padding: 0px;
+      }
+      .navbar-brand>img {
+        height: 100%;
+        padding: 15px;
+        width: auto;
+      }
+      .navbar-brand {
+        /*height: 80px;*/
+      }
+      .nav >li >a{
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }  
+      .navbar-toggle{
+        padding: 10px;
+        margin: 25px 15px 25px 0;
+      }
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png"></a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>          
+        </div>
+<<<<<<< HEAD
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">ABOUT</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">CONTACT</a></li> 
+            <li><a href="#">HELP</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+=======
+        <div class="col-md-10">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><span class="glyphicon glyphicon-th" style="margin-right:5px;" aria-hidden="true"></span>Readers</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-bordered table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 40px">#</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th style="width: 50px">Avatar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>STU001</td>
+                    <td>Trần Nguyễn Thanh Nam</td>
+                    <td>Namtnt@yahoo.com</td>
+                    <td>09238754634</td>
+                    <td><img src="img/stu.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>INS001</td>
+                    <td>Lê Thanh Sơn</td>
+                    <td>sontl@gmail.com</td>
+                    <td></td>
+                    <td><img src="img/doctor.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>STU002</td>
+                    <td>Đinh La Thanh</td>
+                    <td>thanhdl@gmail.com</td>
+                    <td>08375635</td>
+                    <td><img src="img/images.png"></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>STU003</td>
+                    <td>Nguyễn Thị Hiền</td>
+                    <td>hiennt@yahoo.com</td>
+                    <td></td>
+                    <td><img src="img/girl.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>STU004</td>
+                    <td>Lê Nguyên Thành</td>
+                    <td>thanhln@gmail.com</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>STU005</td>
+                    <td>Nguyễn Hải Nam</td>
+                    <td>namnh@yahoo.com</td>
+                    <td>0967684735</td>
+                    <td><img src="img/5.jpg"></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-plus" aria-hidden="true"></i>New Reader</button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="exampleModalLabel">New Reader</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                          <label for="inputCode" class="col-sm-2 control-label">Code:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputCode" placeholder="Enter reader code">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputName" class="col-sm-2 control-label">Name:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName" placeholder="Enter reader name">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail" class="col-sm-2 control-label">Email:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Enter reader email">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPhone" class="col-sm-2 control-label">Phone:</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Enter reader phone">
+                          </div>
+                        </div>
+                                            
+                      </form>
+                      <div class="row form-group">
+                        <label for="inputAvatar" class="col-sm-2" style="text-align: right;">Avatar:</label>
+                        <div class="col-sm-10">
+                          <input type="file" style="display: none" id="choose-file" />
+                          <button id="btnTest" class="btn btn-default btn-xs active">Browse...</button> No file selected
+                      </div>   
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                      <button type="button" class="btn btn-default">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Test javascript -->
+      <div class="btn btn-success" id="demo" onclick="abc1()">Test</div>
+      <h6 id="1"></h6>
+      <script type="text/javascript">
+          function abc() {
+            if(confirm("we need done!!")==true){
+              document.getElementById("1").innerHTML = "we needed you";
+            }else{
+              document.getElementById(1).innerHTML = "we don't care what you did"
+            }
+          }
+          function abc1() {
+            // body...
+            if(prompt("What's your name?", "My name's Thanh")==true){
+              document.getElementById("1").innerHTML = "you filled";
+            }
+          }
+>>>>>>> 6421674f5a403a1e98a6749b939cbfe63e725474
+
+        document.getElementById('1').innerHTML = "you have choosed not yet!!";
+      </script>
+    </div>  
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<<<<<<< HEAD
+    <script src="../MyProject/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../MyProject/js/bootstrap.min.js"></script>
+=======
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Myscript.js"></script>
+>>>>>>> 6421674f5a403a1e98a6749b939cbfe63e725474
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script>
+      $(document).ready(function(){
+        $( '#btnTest' ).click( function() {
+          $( '#choose-file' ).trigger( 'click' );
+          });
+      });
+    </script> 
+    
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test jQuery</title>
+</head>
+<body>
+
+<button class="button2">Ok</button>
+<button class="button1">Ok</button>
+<p id="p2">this is hide if you click the buuton</p>
+<p id="p1">this is  hover</p>
+<button class="btnToggle">Toggle</button>
+<p id="pTogg">this want to toggle immediately</p>
+
+
+
+
+
+
+<script src="jQuery/js/jquery-3.2.1.min.js"></script>
+<script>
+  $(function(){
+   		$('.button2').click(function(){
+   			$('#p2').hide();
+   		}); 
+
+   		// $('.button1').click(function(){
+   		// 	$('#p2').show();
+   		// 	$('#p2').click(function(){
+   		// 		alert('you just click into tag p');
+   		// 		$(this).hide();
+   		// 	});
+   		// });
+   		// $('#p1').hover(function(){
+   		// 	$('#p1').hide(100);
+   		// },
+   		// function(){
+   		// 	$('#p1').show();
+   		// });
+   		$('.btnToggle').click(function(){
+   			$('#pTogg').toggle();
+   		});
+
+  });
+</script>
+</body>
+</html>
