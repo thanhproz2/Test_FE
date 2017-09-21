@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Test jQuery</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Exercise</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
 </head>
+
 <body>
+    <div class="container">
+        <div id="content">
 
-<button class="button2">Ok</button>
-<button class="button1">Ok</button>
-<p id="p2">this is hide if you click the buuton</p>
-<p id="p1">this is  hover</p>
-<button class="btnToggle">Toggle</button>
-<p id="pTogg">this want to toggle immediately</p>
+        </div>
+    </div>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var xhr = new XMLHttpRequest(); //Create XMLHttpRequest object
 
+        xhr.onload = function() {
+            if (xhr.status == 200) {
+                responseObject = JSON.parse(xhr.responseText);
 
+                // BUILD UP =STRING WHITH NEW CONTENT
+                var newContent = '';
+                for (var i = 0; i < responseObject.events.length; i++) {
+                    newContent += '<div class="event">'
+                    newContent += '<img src="' + responseObject.events[i].map + '" />';
+                    newContent += '<p><b>' + responseObject.events[i].location + '</b></p>';
+                    newContent += '<p><b>' + responseObject.events[i].date + '</b></p>';
+                    newContent += '</div>'
+                }
 
+                // Update the page with the new content
+                document.getElementById('content').innerHTML = newContent;
+            }
+        };
 
-
-<script src="jQuery/js/jquery-3.2.1.min.js"></script>
-<script>
-  $(function(){
-   		$('.button2').click(function(){
-   			$('#p2').hide();
-   		}); 
-
-   		// $('.button1').click(function(){
-   		// 	$('#p2').show();
-   		// 	$('#p2').click(function(){
-   		// 		alert('you just click into tag p');
-   		// 		$(this).hide();
-   		// 	});
-   		// });
-   		// $('#p1').hover(function(){
-   		// 	$('#p1').hide(100);
-   		// },
-   		// function(){
-   		// 	$('#p1').show();
-   		// });
-   		$('.btnToggle').click(function(){
-   			$('#pTogg').toggle();
-   		});
-
-  });
-</script>
+        xhr.open('GET', 'data/data.json', true);
+        xhr.send(null);
+    </script>
 </body>
+
 </html>
