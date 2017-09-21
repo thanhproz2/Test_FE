@@ -1,0 +1,8 @@
+{
+    "events": [
+        { "location": "USA", "date": "May 1", "map": "img/logo.jpg" },
+        { "location": "UK", "date": "May 2", "map": "img/girl.jpg" },
+        { "location": "Paris", "date": "May 3", "map": "img/5.jpg" },
+        { "location": "VN", "date": "May 4", "map": "img/doctor.jpg" }
+    ]
+}
